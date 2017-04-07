@@ -1,0 +1,90 @@
+
+/******************************
+Fonts and CSS defintions
+******************************/
+@font-face {
+    font-family: palanquin;
+    src: url(fonts/palanquin/palanquin-bold.ttf);
+}
+
+* {
+    font-family: palanquin;
+    font-size: 24px;
+}
+
+/******************************/
+
+ul li {
+    max-width: 550px;
+    background-color: #FDFFD0;
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: -16px;
+    margin-top: -16px;
+}
+
+h1 {
+	background-color: #4CAF50; /* Green */
+    border: 2;
+    color: white;
+    padding: 20px 400px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    opacity: 0.8;
+}
+
+h2 {
+    font-size: 28px;
+    margin-left: 20px;
+}
+
+body {
+    background: pearl;
+}
+
+
+input[type=submit] {
+    background-color: orange; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 35px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.content {
+	max-height: 400px;
+	max-width: 600px;
+	margin: 100px;
+    padding: 20px;
+    background-color: #4CAF50; /* Green */
+    opacity: 0.8;
+    align-
+}
+
+.floatbottom {
+    position: absolute;
+    bottom: 0;
+    background-color: #4CAF50; /* Green */
+    opacity: 0.8;
+}
+
+.value-field {
+    max-width: 150;
+    display: inline-block;
+    float: right;
+    color: crimson;
+}
+
+progress {
+    border: none;
+}

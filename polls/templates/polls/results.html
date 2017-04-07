@@ -1,0 +1,27 @@
+{% load static %}
+{% load mathfilters %}
+{% load temptags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+{% include "polls/pollsheader.html" %}
+
+<div class='content'>
+<h2>{{ question.question_text }}</h2>
+
+<ul>
+{% for choice in question.choice_set.all %}
+	{%	with numerator=choice.votes denominator=total_votes %}
+    	<li>
+    		<label>{{ choice.choice_text }}</label>
+    		<progress max="100" value="{{numerator|div:denominator|mul:100|roundoff}}"></progress>
+    		<div class="value-field">{{ numerator|div:denominator|mul:100|roundoff }}%</div>
+    	</li>
+    {% endwith %}
+{% endfor %}
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+</div>
+
+<div class='floatbottom'><a href="{% url 'polls:index' %}">Back to all polls</a></div>
